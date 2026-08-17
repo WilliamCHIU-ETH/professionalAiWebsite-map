@@ -6,15 +6,11 @@
 
 ## Product Intent
 
-![專業人士 AI 網站：從公開資料生成，到醫師自行編輯與發布](docs/diagrams/product-editing-flow.svg)
+專業人士需要在網路上建立可信任的個人形象，但通常缺少自行建站與持續維護內容的時間。這個產品希望利用 AI 降低個人網站的建立與維護門檻，先以醫師作為切入場景。
 
-[開啟 SVG 原圖](docs/diagrams/product-editing-flow.svg)
-
-一句話：把「一次性自動建站 Demo」推進成「醫師可自行維護的 AI-assisted Website CMS」。
+交接 repo 已證明「公開社群資料可以快速生成個人網站」的技術路徑；下一階段則要把一次性建站 Demo 推進成醫師能自行維護的 AI-assisted Website CMS。
 
 ## 現有 Repo 做到哪裡
-
-上圖的 `IMPORT → STRUCTURE → GENERATE` 是現有 repo 已完成的主路徑；`EDIT → VALIDATE → PUBLISH` 是下一階段要補上的產品能力。
 
 | 已確認能力 | 現有限制 |
 |---|---|
@@ -25,6 +21,16 @@
 | RWD、掛號連結、醫療免責 | 沒有 draft / preview / publish / rollback；runtime 沒有 LLM / Chat editing |
 
 詳細技術盤點：[docs/current-state.md](docs/current-state.md)
+
+## 目標產品流程
+
+![專業人士 AI 網站：從公開資料生成，到醫師自行編輯與發布](docs/diagrams/product-editing-flow.svg)
+
+[開啟 SVG 原圖](docs/diagrams/product-editing-flow.svg)
+
+這張圖描述產品的運作流程，不是 Product Intent。`IMPORT → STRUCTURE → GENERATE` 是現有 repo 已完成的主路徑；`EDIT → VALIDATE → PUBLISH` 是下一階段要補上的產品能力。
+
+圖中也標示責任邊界：AI／編輯介面負責把需求轉成結構化修改；確定性系統負責驗證、生成與版本保存；醫師保留預覽及確認發布的決定權。
 
 ## 我的責任範圍
 
@@ -37,10 +43,6 @@
 本階段不處理商業模式、定價、付費意願或曝光成效。
 
 詳細責任與候選架構：[docs/ownership-scope.md](docs/ownership-scope.md)
-
-## 目標方向
-
-上圖同時標示責任邊界：AI／編輯介面負責把需求轉成結構化修改；確定性系統負責驗證、生成與版本保存；醫師保留預覽及確認發布的決定權。
 
 ## 建議順序
 
